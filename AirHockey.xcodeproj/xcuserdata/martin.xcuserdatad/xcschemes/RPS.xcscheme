@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5B65823D13FDF9AC007DCA79"
-               BuildableName = "RPS.app"
-               BlueprintName = "RPS"
-               ReferencedContainer = "container:RPS.xcodeproj">
+               BuildableName = "AirHockey.app"
+               BlueprintName = "AirHockey"
+               ReferencedContainer = "container:AirHockey.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,9 +40,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B65823D13FDF9AC007DCA79"
-            BuildableName = "RPS.app"
-            BlueprintName = "RPS"
-            ReferencedContainer = "container:RPS.xcodeproj">
+            BuildableName = "AirHockey.app"
+            BlueprintName = "AirHockey"
+            ReferencedContainer = "container:AirHockey.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B65823D13FDF9AC007DCA79"
-            BuildableName = "RPS.app"
-            BlueprintName = "RPS"
-            ReferencedContainer = "container:RPS.xcodeproj">
+            BuildableName = "AirHockey.app"
+            BlueprintName = "AirHockey"
+            ReferencedContainer = "container:AirHockey.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

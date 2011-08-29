@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ScoreBoard : CCLayer
+@interface ScoreBoard : CCLayer {
+    NSNumber *userScore, *COMScore;
+}
+
+- (void)setUserScore:(NSNumber *)aScore;
+- (void)setCOMScore:(NSNumber *)aScore;
 
 @end

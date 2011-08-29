@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3BB43D140C1E0800CD2AB9 /* g.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3BB43C140C1E0800CD2AB9 /* g.png */; };
+		5B3BB440140C282100CD2AB9 /* ScoreBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3BB43F140C282100CD2AB9 /* ScoreBoard.m */; };
+		5B3BB442140C2A4900CD2AB9 /* scoreboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3BB441140C2A4900CD2AB9 /* scoreboard.png */; };
 		5B65824313FDF9AC007DCA79 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B65824213FDF9AC007DCA79 /* QuartzCore.framework */; };
 		5B65824513FDF9AC007DCA79 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B65824413FDF9AC007DCA79 /* OpenGLES.framework */; };
 		5B65824713FDF9AC007DCA79 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B65824613FDF9AC007DCA79 /* OpenAL.framework */; };
@@ -130,10 +133,16 @@
 		5B6583BB13FE004D007DCA79 /* AboutScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6583BA13FE004D007DCA79 /* AboutScene.m */; };
 		5B6583BD13FE0957007DCA79 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6583BC13FE0957007DCA79 /* bg.png */; };
 		5B6583BF13FE0EA5007DCA79 /* puck.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6583BE13FE0EA5007DCA79 /* puck.png */; };
+		5BB2B7E014094110004AABE0 /* raindrop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5BB2B7DF14094110004AABE0 /* raindrop.gif */; };
+		5BB2B7E31409418E004AABE0 /* snow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5BB2B7E21409418E004AABE0 /* snow.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B65823E13FDF9AC007DCA79 /* RPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B3BB43C140C1E0800CD2AB9 /* g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g.png; sourceTree = "<group>"; };
+		5B3BB43E140C282100CD2AB9 /* ScoreBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreBoard.h; sourceTree = "<group>"; };
+		5B3BB43F140C282100CD2AB9 /* ScoreBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreBoard.m; sourceTree = "<group>"; };
+		5B3BB441140C2A4900CD2AB9 /* scoreboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreboard.png; sourceTree = "<group>"; };
+		5B65823E13FDF9AC007DCA79 /* AirHockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirHockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B65824213FDF9AC007DCA79 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5B65824413FDF9AC007DCA79 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		5B65824613FDF9AC007DCA79 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -377,6 +386,8 @@
 		5B6583BA13FE004D007DCA79 /* AboutScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutScene.m; sourceTree = "<group>"; };
 		5B6583BC13FE0957007DCA79 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		5B6583BE13FE0EA5007DCA79 /* puck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puck.png; sourceTree = "<group>"; };
+		5BB2B7DF14094110004AABE0 /* raindrop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = raindrop.gif; sourceTree = "<group>"; };
+		5BB2B7E21409418E004AABE0 /* snow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = snow.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,7 +421,7 @@
 		5B65823F13FDF9AC007DCA79 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B65823E13FDF9AC007DCA79 /* RPS.app */,
+				5B65823E13FDF9AC007DCA79 /* AirHockey.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -447,8 +458,12 @@
 			isa = PBXGroup;
 			children = (
 				5B6583BC13FE0957007DCA79 /* bg.png */,
+				5BB2B7E21409418E004AABE0 /* snow.gif */,
+				5BB2B7DF14094110004AABE0 /* raindrop.gif */,
+				5B3BB441140C2A4900CD2AB9 /* scoreboard.png */,
 				5B65825413FDF9AC007DCA79 /* Default.png */,
 				5B65825613FDF9AC007DCA79 /* fps_images.png */,
+				5B3BB43C140C1E0800CD2AB9 /* g.png */,
 				5B6583BE13FE0EA5007DCA79 /* puck.png */,
 				5B65825813FDF9AC007DCA79 /* Icon-72.png */,
 				5B65825A13FDF9AC007DCA79 /* Icon-Small-50.png */,
@@ -736,6 +751,8 @@
 				5B6583B713FE003E007DCA79 /* SettingsScene.m */,
 				5B6583B913FE004D007DCA79 /* AboutScene.h */,
 				5B6583BA13FE004D007DCA79 /* AboutScene.m */,
+				5B3BB43E140C282100CD2AB9 /* ScoreBoard.h */,
+				5B3BB43F140C282100CD2AB9 /* ScoreBoard.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -755,9 +772,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B65823D13FDF9AC007DCA79 /* RPS */ = {
+		5B65823D13FDF9AC007DCA79 /* AirHockey */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B6583AA13FDF9AF007DCA79 /* Build configuration list for PBXNativeTarget "RPS" */;
+			buildConfigurationList = 5B6583AA13FDF9AF007DCA79 /* Build configuration list for PBXNativeTarget "AirHockey" */;
 			buildPhases = (
 				5B65823A13FDF9AC007DCA79 /* Sources */,
 				5B65823B13FDF9AC007DCA79 /* Frameworks */,
@@ -767,9 +784,9 @@
 			);
 			dependencies = (
 			);
-			name = RPS;
+			name = AirHockey;
 			productName = RPS;
-			productReference = 5B65823E13FDF9AC007DCA79 /* RPS.app */;
+			productReference = 5B65823E13FDF9AC007DCA79 /* AirHockey.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -777,7 +794,10 @@
 /* Begin PBXProject section */
 		5B65823513FDF9AC007DCA79 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 5B65823813FDF9AC007DCA79 /* Build configuration list for PBXProject "RPS" */;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 5B65823813FDF9AC007DCA79 /* Build configuration list for PBXProject "AirHockey" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -789,7 +809,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B65823D13FDF9AC007DCA79 /* RPS */,
+				5B65823D13FDF9AC007DCA79 /* AirHockey */,
 			);
 		};
 /* End PBXProject section */
@@ -810,6 +830,10 @@
 				5B65826613FDF9AC007DCA79 /* iTunesArtwork in Resources */,
 				5B6583BD13FE0957007DCA79 /* bg.png in Resources */,
 				5B6583BF13FE0EA5007DCA79 /* puck.png in Resources */,
+				5BB2B7E014094110004AABE0 /* raindrop.gif in Resources */,
+				5BB2B7E31409418E004AABE0 /* snow.gif in Resources */,
+				5B3BB43D140C1E0800CD2AB9 /* g.png in Resources */,
+				5B3BB442140C2A4900CD2AB9 /* scoreboard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +948,7 @@
 				5B6583B513FE001E007DCA79 /* MultiplayerScene.m in Sources */,
 				5B6583B813FE003E007DCA79 /* SettingsScene.m in Sources */,
 				5B6583BB13FE004D007DCA79 /* AboutScene.m in Sources */,
+				5B3BB440140C282100CD2AB9 /* ScoreBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,10 +967,11 @@
 					"COCOS2D_DEBUG=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -957,10 +983,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -976,8 +1003,9 @@
 				GCC_PREFIX_HEADER = RPS/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = RPS/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = "-lz";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AirHockey;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -991,8 +1019,9 @@
 				GCC_PREFIX_HEADER = RPS/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = RPS/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = "-lz";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AirHockey;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1001,7 +1030,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B65823813FDF9AC007DCA79 /* Build configuration list for PBXProject "RPS" */ = {
+		5B65823813FDF9AC007DCA79 /* Build configuration list for PBXProject "AirHockey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B6583A813FDF9AF007DCA79 /* Debug */,
@@ -1010,7 +1039,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B6583AA13FDF9AF007DCA79 /* Build configuration list for PBXNativeTarget "RPS" */ = {
+		5B6583AA13FDF9AF007DCA79 /* Build configuration list for PBXNativeTarget "AirHockey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B6583AB13FDF9AF007DCA79 /* Debug */,

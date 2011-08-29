@@ -7,6 +7,7 @@
 //
 
 #import "SinglePlayerScene.h"
+#import "ScoreBoard.h"
 
 @implementation SinglePlayerScene
 
@@ -166,6 +167,14 @@ BOOL backy = NO;
     if (self) {
         
         NSLog(@"init");
+        
+        ScoreBoard* myScoreBoard = [[ScoreBoard alloc] init];
+        [myScoreBoard setCOMScore:[NSNumber numberWithInt:0]];
+        [myScoreBoard setUserScore:[NSNumber numberWithInt:0]];
+        
+        myScoreBoard.position = ccp(200, 200);
+        
+        [gameLayer addChild:myScoreBoard z:99];
         
         [self registerWithTouchDispatcher];
         

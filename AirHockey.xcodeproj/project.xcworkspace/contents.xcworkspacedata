@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:RPS.xcodeproj">
+      location = "self:AirHockey.xcodeproj">
    </FileRef>
 </Workspace>
