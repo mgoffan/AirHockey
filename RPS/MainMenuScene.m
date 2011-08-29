@@ -40,93 +40,15 @@
     [[CCDirector sharedDirector] replaceScene:[AboutScene scene]];
 }
 
-BOOL backx[2] = {NO, NO};
-BOOL backy[2] = {NO, NO};
-
-- (void)animatePuck {
-    CGPoint nextPoint;
-    
-    if (puck[0].position.x == 490.0) {
-        nextPoint.x = puck[1].position.x - 10.0;
-        backx[0] = YES;
-    }
-    else {
-        if (puck[0].position.x == -10.0) {
-            nextPoint.x = puck[0].position.x + 10.0;
-            backx[0] = NO;
-        }
-        else {
-            if (backx[0]) {
-                nextPoint.x = puck[0].position.x - 10.0;
-            }
-            else nextPoint.x = puck[0].position.x + 10.0;
-        }
-    }
-    
-    if (puck[0].position.y == -10.0) {
-        nextPoint.y = puck[0].position.y + 10.0;
-        backy[0] = YES;
-    }
-    else {
-        if (puck[0].position.y == 330.0) {
-            nextPoint.y = puck[0].position.y - 10.0;
-            backy[0] = NO;
-        }
-        else {
-            if (backy[0]) {
-                nextPoint.y = puck[0].position.y + 10.0;
-            }
-            else nextPoint.y = puck[0].position.y - 10.0;
-        }
-    }
-    
-    CCAction *myAction = [CCSequence actions:[CCMoveTo actionWithDuration:.33 position:nextPoint], [CCCallFunc actionWithTarget:self selector:@selector(animatePuck)],nil];
-    [puck[0] runAction:myAction];
-    
+- (void)closeEffect {
+    CCAction *myAction = [CCSequence actions:[CCScaleTo actionWithDuration:0.33 scale:0.999f], [CCCallFunc actionWithTarget:self selector:@selector(startEffect)], nil];
+    [menu runAction:myAction];
 }
 
-- (void)animatePuck2 {
-    CGPoint nextPoint;
-    
-    if (puck[1].position.x == 490.0) {
-        nextPoint.x = puck[1].position.x - 10.0;
-        backx[1] = YES;
-    }
-    else {
-        if (puck[1].position.x == -10.0) {
-            nextPoint.x = puck[1].position.x + 10.0;
-            backx[1] = NO;
-        }
-        else {
-            if (backx[1]) {
-                nextPoint.x = puck[1].position.x - 10.0;
-            }
-            else nextPoint.x = puck[1].position.x + 10.0;
-        }
-    }
-    
-    if (puck[1].position.y == -10.0) {
-        nextPoint.y = puck[1].position.y + 10.0;
-        backy[1] = YES;
-    }
-    else {
-        if (puck[1].position.y == 330.0) {
-            nextPoint.y = puck[1].position.y - 10.0;
-            backy[1] = NO;
-        }
-        else {
-            if (backy[1]) {
-                nextPoint.y = puck[1].position.y + 10.0;
-            }
-            else nextPoint.y = puck[1].position.y - 10.0;
-        }
-    }
-    
-    CCAction *myAction = [CCSequence actions:[CCMoveTo actionWithDuration:.33 position:nextPoint], [CCCallFunc actionWithTarget:self selector:@selector(animatePuck2)],nil];
-    [puck[1] runAction:myAction];
-    
+- (void)startEffect {
+    CCAction *myAction = [CCSequence actions:[CCScaleTo actionWithDuration:0.33 scale:1.005f], [CCCallFunc actionWithTarget:self selector:@selector(closeEffect)], nil];
+    [menu runAction:myAction];
 }
-
 
 // on "init" you need to initialize your instance
 -(id) init
@@ -135,37 +57,54 @@ BOOL backy[2] = {NO, NO};
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
         
-        CCLayer *background = [CCLayer node];
+        bg = [CCLayer node];
         CCSprite *sprite = [CCSprite spriteWithFile:@"bg.png"];
         sprite.position = ccp(240, 160);
-        [background addChild:sprite];
+        [bg addChild:sprite];
         
-        puck[0] = [CCSprite spriteWithFile:@"puck.png"];
-        puck[0].position = ccp(0, 0);
-        puck[1] = [CCSprite spriteWithFile:@"puck.png"];
-        puck[1].position = ccp(320, 480);
+        CCParticleSnow *emitter = [[CCParticleSnow alloc] init];
+        emitter.texture = [[CCTextureCache sharedTextureCache] addImage:@"snow.gif"];
+        emitter.position = ccp(240, 320);
+        emitter.speed = 15.0f;
+        emitter.scale = 1.5f;
+        [bg addChild:emitter];
         
-        [background addChild:puck[0]];
-        [background addChild:puck[1]];
+        CCParticleRain *emitter2 = [[CCParticleRain alloc] init];
+        emitter2.texture = [[CCTextureCache sharedTextureCache] addImage:@"raindrop.gif"];
+        emitter2.position = ccp(240, 320);
+        emitter2.speed = 15.0f;
+        emitter2.scale = 1.5f;
+        [bg addChild:emitter2];
         
 		CCMenuItemFont *menuSinglePlayer    = [CCMenuItemFont itemFromString:@"Single Player" target:self selector:@selector(goSp)];
         CCMenuItemFont *menuMultiPlayer     = [CCMenuItemFont itemFromString:@"Multiplayer" target:self selector:@selector(goMp)];
         CCMenuItemFont *menuSettings        = [CCMenuItemFont itemFromString:@"Settings" target:self selector:@selector(goSettings)];
         CCMenuItemFont *menuAbout           = [CCMenuItemFont itemFromString:@"About" target:self selector:@selector(goAbout)];
         
-        [menuSinglePlayer setColor:ccc3(0, 0, 0)];
-        [menuMultiPlayer setColor:ccc3(0, 0, 0)];
-        [menuSettings setColor:ccc3(0, 0, 0)];
-        [menuAbout setColor:ccc3(0, 0, 0)];
+#ifndef kRColor
+#define kRColor 85
+#endif
+#ifndef kGColor
+#define kGColor 0
+#endif
+#ifndef kBColor
+#define kBColor 0
+#endif
         
-        CCMenu *menu = [CCMenu menuWithItems:menuSinglePlayer, menuMultiPlayer, menuSettings, menuAbout, nil];
+        ccColor3B menuColor = ccc3(kRColor, kGColor, kBColor);
+        
+        [menuSinglePlayer setColor:menuColor];
+        [menuMultiPlayer setColor:menuColor];
+        [menuSettings setColor:menuColor];
+        [menuAbout setColor:menuColor];
+        
+        menu = [CCMenu menuWithItems:menuSinglePlayer, menuMultiPlayer, menuSettings, menuAbout, nil];
         [menu alignItemsVertically];
 		
-        [self addChild:background];
+        [self addChild:bg];
 		[self addChild: menu];
         
-        [self animatePuck];
-        [self animatePuck2];
+        [self startEffect];
 	}
 	return self;
 }

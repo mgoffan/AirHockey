@@ -6,7 +6,14 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-@interface MultiplayerScene : CCScene
-// returns a CCScene that contains the HelloWorldLayer as the only child
+@interface MultiplayerScene : CCScene <CCTargetedTouchDelegate, CCStandardTouchDelegate> {
+    CCLayer *bgLayer;
+    CCLayer *gameLayer;
+    
+    CCSprite *puck[2];
+    
+    CCSprite *ball;
+}
+
 +(CCScene *) scene;
 @end

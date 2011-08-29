@@ -6,8 +6,12 @@
 //  Copyright __MyCompanyName__ 2011. All rights reserved.
 //
 
+#define kNumberOfPucks 15
+
 @interface MainMenuScene : CCScene {
-    CCSprite *puck[2];
+    CCLayer *bg;
+    
+    CCMenu *menu;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
